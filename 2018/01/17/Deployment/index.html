@@ -81,16 +81,17 @@
 
 
 
-<meta name="description" content="One interesting soul">
-<meta property="og:type" content="website">
+<meta name="description" content="个人博客地址：http://www.wlbug.com 搭建流程： 搭建 Node.js 环境搭建 Git 环境GitHub 注册和配置安装配置 Hexo关联 Hexo 与 GitHub PagesGitHub Pages 地址解析到个人域名Hexo 的常用操作  搭建 Node.js 环境  为什么要搭建 Node.js 环境？ - 因为 Hexo 博客系统是基于 Node.js 编写的 Nod">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Mr.keyans">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/01/17/Deployment/index.html">
 <meta property="og:site_name" content="Mr.keyans">
-<meta property="og:description" content="One interesting soul">
+<meta property="og:description" content="个人博客地址：http://www.wlbug.com 搭建流程： 搭建 Node.js 环境搭建 Git 环境GitHub 注册和配置安装配置 Hexo关联 Hexo 与 GitHub PagesGitHub Pages 地址解析到个人域名Hexo 的常用操作  搭建 Node.js 环境  为什么要搭建 Node.js 环境？ - 因为 Hexo 博客系统是基于 Node.js 编写的 Nod">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-17T08:05:37.584Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mr.keyans">
-<meta name="twitter:description" content="One interesting soul">
+<meta name="twitter:description" content="个人博客地址：http://www.wlbug.com 搭建流程： 搭建 Node.js 环境搭建 Git 环境GitHub 注册和配置安装配置 Hexo关联 Hexo 与 GitHub PagesGitHub Pages 地址解析到个人域名Hexo 的常用操作  搭建 Node.js 环境  为什么要搭建 Node.js 环境？ - 因为 Hexo 博客系统是基于 Node.js 编写的 Nod">
 
 
 
@@ -120,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/17/Deployment/"/>
 
 
 
 
 
-  <title>Mr.keyans</title>
+  <title> | Mr.keyans</title>
   
 
 
@@ -155,8 +156,7 @@
     
   
 
-  <div class="container sidebar-position-right 
-  page-home">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -239,9 +239,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -271,9 +271,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/17/Deployment/" itemprop="url">未命名</a></h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -323,8 +321,7 @@
       
 
       
-        
-          <p>个人博客地址：<a href="http://www.wlbug.com" target="_blank" rel="noopener">http://www.wlbug.com</a></p>
+        <p>个人博客地址：<a href="http://www.wlbug.com" target="_blank" rel="noopener">http://www.wlbug.com</a></p>
 <p><strong>搭建流程：</strong></p>
 <p>搭建 Node.js 环境<br>搭建 Git 环境<br>GitHub 注册和配置<br>安装配置 Hexo<br>关联 Hexo 与 GitHub Pages<br>GitHub Pages 地址解析到个人域名<br>Hexo 的常用操作</p>
 <blockquote>
@@ -424,15 +421,41 @@
 <ul>
 <li>a</li>
 <li>b</li>
-<li>c<br>显示部分文章内容<br>如果在博客文章列表中，不想全文显示，可以增加
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/17/Deployment/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<li>c<br>显示部分文章内容<br>如果在博客文章列表中，不想全文显示，可以增加 <a id="more"></a>, 后面的内容就不会显示在列表。</li>
+</ul>
+<p>1<br><!--more--><br>更改主题<br>官方主题库：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p>
+<p>Hexo主题非常，推荐使用 Next 为主题，请阅读 Next 的官方文档（ <a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">http://theme-next.iissnan.com/</a> ），5 分钟快速安装。</p>
+<p>再提示一点，大家可以hexo主题修改一步就hexo s看下变化，初次接触对参数不清楚。只有hexo s后在可以在本地浏览到效果，Ctrl+C 停止服务器。</p>
+<p>添加插件<br>添加 sitemap 和 feed 插件</p>
+<p>切换到你本地的 hexo 目 CIA ，在命令行窗口，输入以下命令</p>
+<p>1<br>2<br>npm install hexo-generator-feed -save<br>npm install hexo-generator-sitemap -save<br>修改 _config.yml，增加以下内容</p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12</p>
+<h1 id="Extensions"><a href="#Extensions" class="headerlink" title="Extensions"></a>Extensions</h1><p>Plugins:</p>
+<ul>
+<li>hexo-generator-feed</li>
+<li>hexo-generator-sitemap<br>#Feed Atom<br>feed:<br>type: atom<br>path: atom.xml<br>limit: 20<br>#sitemap<br>sitemap:<br>path: sitemap.xml<br>再执行以下命令，部署服务端</li>
+</ul>
+<p>1<br>hexo d -g<br>配完之后，就可以访问 <a href="https://bxm0927.github.io/atom.xml" target="_blank" rel="noopener">https://bxm0927.github.io/atom.xml</a> 和 <a href="https://bxm0927.github.io/sitemap.xml" target="_blank" rel="noopener">https://bxm0927.github.io/sitemap.xml</a> ，发现这两个文件已经成功生成了。</p>
+<p>添加 404 页面<br>GitHub Pages 自定义404页面非常容易，直接在根目录下创建自己的404.html就可以。但是自定义404页面仅对绑定顶级域名的项目才起作用，GitHub默认分配的二级域名是不起作用的，使用hexo server在本机调试也是不起作用的。</p>
+<p>其实，404页面可以做更多有意义的事，来做个404公益项目吧。</p>
+<p>推荐使用腾讯公益404 <a href="http://www.qq.com/404/" target="_blank" rel="noopener">http://www.qq.com/404/</a> ：</p>
+<p>1<br>2<br>3<br>4<br>5<br>6</p>
+<p><script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" charset="utf-8" homepageurl="http://www.lovebxm.com/" homepagename="回到我的主页"><br></script><br>复制上面代码，贴粘到目录下新建的404.html即可！</p>
+<p>多PC同步管理博客<br>很多人可能家里一台笔记本，公司一个台式机，想两个同时管理博客，同时达到备份的博客主题、文章、配置的目的。下面就介绍一下用github来备份博客并同步博客。</p>
+<p>A电脑备份博客内容到github<br>配置.gitignore文件。进入博客目录文件夹下，找到此文件，用sublime text 打开，在最后增加两行内容/.deploy_git和/public</p>
+<p>初始化仓库。<br>在博客根目录下，在git bash下依次执行git init和git remote add origin 为远程仓库地址。</p>
+<p>同步到远程仓库。<br>gitbash下依次执行以下命令</p>
+<p>1<br>2<br>3<br>4<br>5<br>git add . #添加目录下所有文件<br>git commit -m “更新说明” #提交并添加更新说明<br>git push -u origin master #推送更新到远程仓库<br>B电脑拉下远程仓库文件<br>在B电脑上同样先安装好node、git、ssh、hexo，然后建好hexo文件夹，安装好插件，（然后选做：将备份到远程仓库的文件及文件夹删除），然后执行以下命令：</p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>git init<br>git remote add origin <server><br>git fetch –all<br>git reset –hard origin/master<br>发布博客后同步<br>在B电脑发布完博客之后，记得将博客备份同步到远程仓库<br>执行以下命令：</server></p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>git add .</p>
+<p>#可以用git master 查看更改内容<br>git commit -m “更新信息”<br>git push -u origin master  #以后每次提交可以直接git push<br>平时同步管理<br>每次想写博客时，先执行：git pull进行同步更新。发布完文章后同样按照上面的 发布博客后同步 同步到远程仓库。</p>
+<p>中文乱码<br>在 md 文件中写中文内容，发布出来后为乱码，原因是 md 的编码不对，将 md 文件另存为UTF-8编码的文件即可解决问题。</p>
+<p>结束语<br>建站的系统有很多，如：</p>
+<p>Hexo + GitHub Pages<br>Jekyll + GitHub Pages<br>WordPress + 服务器 + 域名<br>DeDeCMS + 服务器 + 域名<br>…<br>使用 Hexo + GitHub Pages 建站，有优点也有缺点：</p>
+<p>GitHub Pages 不支持数据库管理，所以你只能做静态页面的博客，不能像其他博客（如 WordPress）那样通过数据库管理自己的博客内容。<br>但是，GitHub Pages 无需购置服务器，免服务器费的同时还能做负载均衡，github pages有300M免费空间。<br>个人博客真的有必要用数据库吗？答案是否定的。博客静态化，评论记录使用第三方的 网易云跟帖就可以了。静态的博客更有利于搜索引擎蜘蛛爬取，轻量化的感觉真的很好。<br>通过 Hexo 你可以轻松地使用 Markdown 编写文章，非常符合我的口味。Markdown 真的是专门针对程序员开发的语言啊，现在感觉没有 Markdown什么都不想写。什么富文本编辑器，什么word，太麻烦了！而且样式都好丑！效率太低！<br>推荐几个很好用的在线 Markdown 编辑器：</p>
+<p>作业部落：<a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="noopener">https://www.zybuluo.com/mdeditor</a><br>马克飞象：<a href="https://maxiang.io" target="_blank" rel="noopener">https://maxiang.io</a><br>推荐图床：</p>
+<p>极简图床 + chrome 插件 + 七牛空间，七牛云储存提供10G的免费空间,以及每月10G的流量，存放个人博客外链图片最好不过了，七牛云储存还有各种图形处理功能、缩略图、视频存放速度也给力。</p>
+
       
     </div>
     
@@ -449,140 +472,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/10/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.keyans">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Mr.keyans">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/10/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-10T18:33:19+08:00">
-                2018-01-10
-              </time>
+              <a href="/2018/01/10/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -592,10 +503,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -603,6 +515,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -623,8 +539,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -689,6 +614,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Deployment"><span class="nav-number">1.</span> <span class="nav-text">Deployment</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Docs-https-hexo-io-docs-deployment-html"><span class="nav-number">1.1.</span> <span class="nav-text">Docs: https://hexo.io/docs/deployment.html</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Extensions"><span class="nav-number">2.</span> <span class="nav-text">Extensions</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -842,6 +783,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
