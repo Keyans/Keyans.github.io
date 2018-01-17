@@ -254,7 +254,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/17/Deployment/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/17/Hexo + GitHub Pages 搭建博客的教程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.keyans">
@@ -273,7 +273,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/17/Deployment/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2018/01/17/Hexo + GitHub Pages 搭建博客的教程/" itemprop="url">未命名</a></h1>
         
 
         <div class="post-meta">
@@ -285,7 +285,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-17T16:06:27+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-17T17:02:38+08:00">
                 2018-01-17
               </time>
             
@@ -324,7 +324,7 @@
 
       
         
-          <p>个人博客地址：<a href="http://www.wlbug.com" target="_blank" rel="noopener">http://www.wlbug.com</a></p>
+          <h1 id="Hexo-GitHub-Pages-搭建博客的教程"><a href="#Hexo-GitHub-Pages-搭建博客的教程" class="headerlink" title="Hexo + GitHub Pages 搭建博客的教程"></a>Hexo + GitHub Pages 搭建博客的教程</h1><p>个人博客地址：<a href="http://www.wlbug.com" target="_blank" rel="noopener">http://www.wlbug.com</a></p>
 <p><strong>搭建流程：</strong></p>
 <p>搭建 Node.js 环境<br>搭建 Git 环境<br>GitHub 注册和配置<br>安装配置 Hexo<br>关联 Hexo 与 GitHub Pages<br>GitHub Pages 地址解析到个人域名<br>Hexo 的常用操作</p>
 <blockquote>
@@ -396,11 +396,11 @@
 <p>看着博客的域名是二级域名，总有一种寄人篱下的感觉，为了让这个小窝看起来更加正式，我在阿里云上买了一个域名，打算将博客绑定自己的域名。</p>
 <p>进行该绑定过程，其实就是一个重定向的过程。</p>
 <p>在 GitHub 仓库的根目录下建立一个 CNAME 的文本文件(注意：没有扩展名)，文件里面只能输入一个你的域名，不能加http://</p>
-<p>1<br>www.lovebxm.com<br>注意：CNAME 一定是在你 Github 项目的 master 根目录下</p>
+<p>1<br>www.wlbug.com<br>注意：CNAME 一定是在你 Github 项目的 master 根目录下</p>
 <p>进入阿里云域名解析地址，添加解析：</p>
 <p>记录类型选择CNAME<br>主机记录填www<br>解析线路选择默认<br>记录值填yourname.github.io<br>TTL值为10分钟<br>再添加一个解析，记录类型A<br>主机记录填www<br>解析线路选择默认<br>记录值填你GitHub 的ip地址（在cmd中ping：）<br>1<br>ping bxm0927.github.com</p>
 <p>点击保存，等 1 分钟，访问下你自己的域名，一切就ok了。</p>
-<p>域名绑定成功，域名解析成功，因此你在浏览中输入 www.lovebxm.com，或 lovebxm.com 就可以访问到博客了，输入 bxm0927.github.io 会重定向到 www.lovebxm.com。过程：www 的方式，会先解析成 <a href="http://xxxx.github.io，然后根据" target="_blank" rel="noopener">http://xxxx.github.io，然后根据</a> CNAME 再变成 www</p>
+<p>域名绑定成功，域名解析成功，因此你在浏览中输入 www.wlbug.com，或 wlbug.com 就可以访问到博客了，输入 bxm0927.github.io 会重定向到 www.wlbug.com。过程：www 的方式，会先解析成 <a href="http://xxxx.github.io，然后根据" target="_blank" rel="noopener">http://xxxx.github.io，然后根据</a> CNAME 再变成 www</p>
 <p>注意：CNAME文件在下次 hexo deploy的时候就消失了，需要重新创建，这样就很繁琐</p>
 <p>方法一：每次 hexo d 之后，就去 GitHub 仓库根目录新建 CNAME文件</p>
 <p>方法二：在 hexo g 之后， hexo d 之前，把CNAME文件复制到 “\public\” 目录下面，里面写入你要绑定的域名。</p>
@@ -413,7 +413,7 @@
 </ul>
 <p>注意1：每次生成的 CNAME 都是 yoursite.com 怎么解决？</p>
 <p>修改 _config.yml</p>
-<p>1<br>2<br>3<br>4<br>url: <a href="http://www.lovebxm.com" target="_blank" rel="noopener">http://www.lovebxm.com</a><br>root: /<br>permalink: :year/:month/:day/:title/<br>permalink_defaults:<br>Hexo 的常用操作<br>发表一篇文章<br>1<br>2<br>3<br>4<br>hexo new “文章标题”<br>D:\GitHub\Hexo\test&gt;hexo new “文章标题”<br>INFO  Created: D:\GitHub\Hexo\test\source_posts\文章标题.md<br>在本地博客文件夹 source_posts 文件夹下看到我们新建的 markdown 文件。</p>
+<p>1<br>2<br>3<br>4<br>url: <a href="http://www.wlbug.com" target="_blank" rel="noopener">http://www.wlbug.com</a><br>root: /<br>permalink: :year/:month/:day/:title/<br>permalink_defaults:<br>Hexo 的常用操作<br>发表一篇文章<br>1<br>2<br>3<br>4<br>hexo new “文章标题”<br>D:\GitHub\Hexo\test&gt;hexo new “文章标题”<br>INFO  Created: D:\GitHub\Hexo\test\source_posts\文章标题.md<br>在本地博客文件夹 source_posts 文件夹下看到我们新建的 markdown 文件。</p>
 <p>当然，我们也可以手动添加Markdown文件在source-&gt;_deploy文件夹下，其效果同样可以媲美hexo new</p>
 <p>文章编辑好之后，运行生成、部署命令：</p>
 <p>1<br>2<br>3<br>4<br>5<br>hexo clean<br>hexo g<br>hexo d<br>当然你也可以执行下面的命令，相当于上面两条命令的效果</p>
@@ -427,139 +427,11 @@
 <li>c<br>显示部分文章内容<br>如果在博客文章列表中，不想全文显示，可以增加
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/01/17/Deployment/#more" rel="contents">
+            <a class="btn" href="/2018/01/17/Hexo + GitHub Pages 搭建博客的教程/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
           <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/10/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.keyans">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Mr.keyans">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/10/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-10T18:33:19+08:00">
-                2018-01-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
         
       
     </div>
@@ -639,7 +511,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
