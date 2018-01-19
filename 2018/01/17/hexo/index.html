@@ -90,18 +90,18 @@
 
 
 
-<meta name="description" content="个人博客地址：http://www.wlbug.com 搭建流程： 搭建 Node.js 环境搭建 Git 环境GitHub 注册和配置安装配置 Hexo关联 Hexo 与 GitHub PagesGitHub Pages 地址解析到个人域名Hexo 的常用操作">
+<meta name="description" content="个人博客地址：http://www.wlbug.com 搭建流程： 搭建 Node.js 环境搭建 Git 环境GitHub 注册和配置安装配置 Hexo关联 Hexo 与 GitHub PagesGitHub Pages 地址解析到个人域名Hexo 的常用操作  搭建 Node.js 环境  为什么要搭建 Node.js 环境？ - 因为 Hexo 博客系统是基于 Node.js 编写的 Nod">
 <meta name="keywords" content="博客,github">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo+Github">
 <meta property="og:url" content="http://yoursite.com/2018/01/17/hexo/index.html">
 <meta property="og:site_name" content="Mr.keyans">
-<meta property="og:description" content="个人博客地址：http://www.wlbug.com 搭建流程： 搭建 Node.js 环境搭建 Git 环境GitHub 注册和配置安装配置 Hexo关联 Hexo 与 GitHub PagesGitHub Pages 地址解析到个人域名Hexo 的常用操作">
+<meta property="og:description" content="个人博客地址：http://www.wlbug.com 搭建流程： 搭建 Node.js 环境搭建 Git 环境GitHub 注册和配置安装配置 Hexo关联 Hexo 与 GitHub PagesGitHub Pages 地址解析到个人域名Hexo 的常用操作  搭建 Node.js 环境  为什么要搭建 Node.js 环境？ - 因为 Hexo 博客系统是基于 Node.js 编写的 Nod">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-18T09:47:31.116Z">
+<meta property="og:updated_time" content="2018-01-19T08:32:08.243Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo+Github">
-<meta name="twitter:description" content="个人博客地址：http://www.wlbug.com 搭建流程： 搭建 Node.js 环境搭建 Git 环境GitHub 注册和配置安装配置 Hexo关联 Hexo 与 GitHub PagesGitHub Pages 地址解析到个人域名Hexo 的常用操作">
+<meta name="twitter:description" content="个人博客地址：http://www.wlbug.com 搭建流程： 搭建 Node.js 环境搭建 Git 环境GitHub 注册和配置安装配置 Hexo关联 Hexo 与 GitHub PagesGitHub Pages 地址解析到个人域名Hexo 的常用操作  搭建 Node.js 环境  为什么要搭建 Node.js 环境？ - 因为 Hexo 博客系统是基于 Node.js 编写的 Nod">
 
 
 
@@ -334,7 +334,6 @@
         <p>个人博客地址：<a href="http://www.wlbug.com" target="_blank" rel="noopener">http://www.wlbug.com</a></p>
 <p><strong>搭建流程：</strong></p>
 <p>搭建 Node.js 环境<br>搭建 Git 环境<br>GitHub 注册和配置<br>安装配置 Hexo<br>关联 Hexo 与 GitHub Pages<br>GitHub Pages 地址解析到个人域名<br>Hexo 的常用操作</p>
-<a id="more"></a>
 <blockquote>
 <p>搭建 Node.js 环境</p>
 </blockquote>
@@ -432,7 +431,7 @@
 <ul>
 <li>a</li>
 <li>b</li>
-<li>c<br>显示部分文章内容<br>如果在博客文章列表中，不想全文显示，可以增加 <!-- more -->, 后面的内容就不会显示在列表。</li>
+<li>c<br>显示部分文章内容<br>如果在博客文章列表中，不想全文显示，可以增加 <a id="more"></a>, 后面的内容就不会显示在列表。</li>
 </ul>
 <p>1<br><!--more--><br>更改主题<br>官方主题库：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p>
 <p>Hexo主题非常，推荐使用 Next 为主题，请阅读 Next 的官方文档（ <a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">http://theme-next.iissnan.com/</a> ），5 分钟快速安装。</p>
@@ -883,5 +882,35 @@
 
   <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/src/love.js"></script>
+
+<div id="hexo-helper-live2d">
+  <canvas id="live2dcanvas" width="150" height="300"></canvas>
+</div>
+<style>
+  #live2dcanvas{
+    position: fixed;
+    width: 150px;
+    height: 300px;
+    opacity:0.7;
+    right: 0px;
+    z-index: 999;
+    pointer-events: none;
+    bottom: -20px;
+  }
+</style>
+<script type="text/javascript" src="/live2d/device.min.js"></script>
+<script type="text/javascript">
+const loadScript = function loadScript(c,b){var a=document.createElement("script");a.type="text/javascript";"undefined"!=typeof b&&(a.readyState?a.onreadystatechange=function(){if("loaded"==a.readyState||"complete"==a.readyState)a.onreadystatechange=null,b()}:a.onload=function(){b()});a.src=c;document.body.appendChild(a)};
+(function(){
+  if((typeof(device) != 'undefined') && (device.mobile())){
+    var trElement = document.getElementById('hexo-helper-live2d');
+    trElement.parentNode.removeChild(trElement);
+    return;
+  }else
+    if (typeof(device) === 'undefined') console.error('Cannot find current-device script.');
+  loadScript("/live2d/script.js", function(){loadlive2d("live2dcanvas", "/live2d/assets/wanko.model.json", 0.5);});
+})();
+</script>
+
 </body>
 </html>
